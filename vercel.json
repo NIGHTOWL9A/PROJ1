@@ -3,10 +3,7 @@
   "builds": [
     {
       "src": "server/index.ts",
-      "use": "@vercel/node",
-      "config": {
-        "includeFiles": ["dist/public/**"]
-      }
+      "use": "@vercel/node"
     }
   ],
   "routes": [
@@ -18,10 +15,5 @@
       "src": "/(.*)",
       "dest": "/server/index.ts"
     }
-  ],
-  "functions": {
-    "server/index.ts": {
-      "memory": 1024
-    }
-  }
+  ]
 }
